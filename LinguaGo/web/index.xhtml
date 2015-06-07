@@ -3,9 +3,31 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello"/>
-</f:view>
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:body>
+    <ui:composition template="faces/templatestart.xhtml">
+        <ui:param name="title" value="Lingva Go"/>
+        <ui:define name="textContent">
+            <div class="title">
+                <h2>Приветствуем вас на Lingua Go</h2>
+            </div>
+            <div class="text_content">
+                <p>Lingva Go – это интересный и эффективный способ изучить Английский язык.</p>
+                <p>Lingva Go делает изучение языка увлекательным.</p>
+                <p>Lingva Go подстраивается под твои знания, цели и интересы.</p>
+                <p>Вместе c Lingva Go ты наглядно видишь прогресс обучения.</p>
+                <h:graphicImage url="../resources/images/english-content.jpg"/>
+            </div>
+        </ui:define>
+        <ui:define name="rightSection">
+            <div class="text_content2">
+                <h:graphicImage url="../resources/images/english-only-zone.png"/><br/><br/>
+                <h:form>
+                    <h:commandButton value="Enter"  action="enter" styleClass="commandButton"/><br/><br/>
+                    <h:commandButton value="Registration"  action="registration" styleClass="commandButton"/><br/><br/>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
 </html>
