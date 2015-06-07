@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>#{title}</title>
+    <link rel="stylesheet" type="text/css" href="../resources/styles/style.css" />
+</head>
+<body>
+<div id="main_content">
+    <ui:insert name="header">
+        <ui:include src="header.xhtml"/>
+    </ui:insert>
+
+    <div id="page_content">
+
+        <div id="left_section">
+            <ui:insert name="textContent">
+                <ui:include src="text_content.xhtml"/>
+            </ui:insert>
+        </div>
+
+
+        <div id="right_section">
+            <ui:insert name="rightSection">
+                <ui:include src="right_section.xhtml"/>
+            </ui:insert>
+        </div>
+
+    </div>
+
+    <ui:insert name="footer">
+        <ui:include src="footer.xhtml"/>
+    </ui:insert>
+</div>
+</body>
+</html>
